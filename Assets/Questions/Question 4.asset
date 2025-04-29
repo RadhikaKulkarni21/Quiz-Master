@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: Question 4
   m_EditorClassIdentifier: 
   question: Why did Russia quit fighting World War I?
+  answers:
+  - Loss of army units
+  - Loss of ammunition
+  - Communist overtake
+  - German troops capturing Russia
+  correctAnswerIndex: 3

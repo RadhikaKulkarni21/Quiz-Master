@@ -12,5 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73a3a1e0522a6774195ec38737111d23, type: 3}
   m_Name: Question 8
   m_EditorClassIdentifier: 
-  question: Which type of warfare was highly developed on the Western Front in World
-    War I?
+  question: "The German military operation code-named Walk\xFCre (\u201CValkyrie\u201D)
+    hoped to assassinate which leader?"
+  answers:
+  - Franklin Roosevelt
+  - Winston Churchill
+  - Benito Mussolini
+  - Adolf Hitler
+  correctAnswerIndex: 3

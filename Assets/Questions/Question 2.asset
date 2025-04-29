@@ -14,3 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: Which country did Austria-Hungary go into war with for assasination of
     their Heir?
+  answers:
+  - France
+  - Russia
+  - Serbia
+  - Germany
+  correctAnswerIndex: 3

@@ -14,3 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: Which type of warfare was highly developed on the Western Front in World
     War I?
+  answers:
+  - Special Ops
+  - Electronics
+  - Trench
+  - Naval
+  correctAnswerIndex: 2

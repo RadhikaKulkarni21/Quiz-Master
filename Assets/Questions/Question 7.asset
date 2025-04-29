@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73a3a1e0522a6774195ec38737111d23, type: 3}
   m_Name: Question 7
   m_EditorClassIdentifier: 
-  question: Which type of warfare was highly developed on the Western Front in World
-    War I?
+  question: Which city was the site of a 900-day siege during World War II?
+  answers:
+  - Berlin
+  - Stalingerd
+  - Leningrad
+  - St Petersburg
+  correctAnswerIndex: 1
