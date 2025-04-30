@@ -17,6 +17,6 @@ MonoBehaviour:
   answers:
   - Special Ops
   - Electronics
-  - Trench
   - Naval
-  correctAnswerIndex: 2
+  - Trench
+  correctAnswerIndex: 3

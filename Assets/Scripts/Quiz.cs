@@ -13,7 +13,7 @@ public class Quiz : MonoBehaviour
     [Header("Answers")]
     [SerializeField] GameObject[] answerButtons;
     int correctAnswerIndex;
-    bool hasAnsAlready;
+    bool hasAnsAlready = true;
 
     [Header("Button colors")]
     [SerializeField] Sprite defaultAnswerSprite;
@@ -23,9 +23,21 @@ public class Quiz : MonoBehaviour
     [SerializeField] Image timerImage;
     Timer timer;
 
-    void Start()
+    [Header("Scores")]
+    [SerializeField] TextMeshProUGUI scoreText;
+    ScoreKeeper scoreKeeper;
+
+    [Header("ProgressBar")]
+    [SerializeField] Slider progressBar;
+
+    public bool isComplete;
+
+    void Awake()
     {
         timer = FindAnyObjectByType<Timer>();
+        scoreKeeper = FindAnyObjectByType<ScoreKeeper>();
+        progressBar.maxValue = question.Count;
+        progressBar.value = 0;
     }
 
     void Update()
@@ -33,6 +45,12 @@ public class Quiz : MonoBehaviour
         timerImage.fillAmount = timer.fillFraction;
         if (timer.LoadNextQ)
         {
+            if (progressBar.value == progressBar.maxValue)
+            {
+                isComplete = true;
+                return;
+            }
+
             hasAnsAlready = false;
             GetNextQuestion();
             timer.LoadNextQ = false;
@@ -52,6 +70,8 @@ public class Quiz : MonoBehaviour
             SetDefaultButtonSprites();
             GetRandomQ();
             DisplayQuestions();
+            progressBar.value++;
+            scoreKeeper.IncrementQuestionsSeen();
         }
     }
 
@@ -106,6 +126,9 @@ public class Quiz : MonoBehaviour
         DisplayAnswer(index);
         SetButtonState(false);
         timer.CancelTimer();
+        scoreText.text = "Score: " + scoreKeeper.CalculateScore() + "%";
+
+        
     }
 
     //To show correct answer and if guessed incorrectly highlights the correct answer
@@ -118,6 +141,7 @@ public class Quiz : MonoBehaviour
             questionText.text = "Correct";
             buttonImage = answerButtons[index].GetComponent<Image>();
             buttonImage.sprite = correctAnswerSprite;
+            scoreKeeper.IncrementCorrectAns();
         }
         else
         {

@@ -49,6 +49,5 @@ public class Timer : MonoBehaviour
                 LoadNextQ = true;
             }
         }      
-        //Debug.Log(isAnsweringQ + ":" + timerValue + "=" + fillFraction);
     }
 }
