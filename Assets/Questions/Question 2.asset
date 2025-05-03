@@ -17,6 +17,6 @@ MonoBehaviour:
   answers:
   - France
   - Russia
-  - Serbia
   - Germany
+  - Serbia
   correctAnswerIndex: 3

@@ -3,6 +3,7 @@ using TMPro;
 
 public class EndScreen : MonoBehaviour
 {
+    //To show final score and restart the game
     [SerializeField] TextMeshProUGUI finalScoreText;
     ScoreKeeper scoreKeeper;
 

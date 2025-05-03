@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] float timeToCompleteQ = 30f;
-    [SerializeField] float timeToShowCorrectAns = 10f;
+    [SerializeField] float timeToCompleteQ = 30f;//too much reduced to 10f-15f
+    [SerializeField] float timeToShowCorrectAns = 10f;//too much reduce to somewhere between 2-5f
 
     [SerializeField] public bool isAnsweringQ = false;
     [SerializeField] public bool LoadNextQ = false;

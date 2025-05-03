@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 public class Quiz : MonoBehaviour
 {
+    //Header for better [SerializeField] managment of variables
     [Header("Questions")]
     [SerializeField] TextMeshProUGUI questionText;
     [SerializeField] List<QuestionSO> question;
@@ -30,6 +31,7 @@ public class Quiz : MonoBehaviour
     [Header("ProgressBar")]
     [SerializeField] Slider progressBar;
 
+    //For After answering the question or timer is complete
     public bool isComplete;
 
     void Awake()

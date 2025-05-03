@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    //game manager to switch scenes
     Quiz quiz;
     EndScreen endScreen;
 
