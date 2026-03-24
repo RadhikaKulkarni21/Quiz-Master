@@ -11,3 +11,11 @@ Focus Points:
 3) Gamemanager
 4) Arrays/List
 5) Timer/Timer fill fraction
+
+Explanation:
+- A quiz game with timer and points.
+- A game manager to flip through the quiz, start/end screen.
+- We are using array to store all the questions, options and answers.
+- Added a timer as each question is timed, score keeper to calculate score and progress bar to track the quiz.
+- Questions are at random.
+- Using textMeshPro for the Text gameObjects
